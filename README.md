@@ -1,1 +1,1 @@
-# Predicting-exoplanet-mass-and-radius-relation
+# Predicting exoplanet mass and radius relationship
