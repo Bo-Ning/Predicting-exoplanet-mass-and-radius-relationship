@@ -109,7 +109,6 @@ MRpredict <- function(data, sigma, Mass.min = NULL, Mass.max = NULL,
   k.fold <- k.fold
   
   degree.candidate <- seq(5, degree, by = 5)
-  degree.candidate <- 3:15
   deg.length <- length(degree.candidate)
   
   if (select.deg == "cv") {
@@ -174,7 +173,7 @@ MRpredict <- function(data, sigma, Mass.min = NULL, Mass.max = NULL,
       aic[d-1] <- MR.fit$aic
     }
     
-    deg.choose <- which(aic == min(aic)) + 1
+    deg.choose <- which(aic == min(aic)) 
   } else if (select.deg == "bic") {
     bic <- rep(NA, deg - 1)
     for (d in 2:deg) {
@@ -182,7 +181,7 @@ MRpredict <- function(data, sigma, Mass.min = NULL, Mass.max = NULL,
       bic[d-1] <- MR.fit$bic
     }
     
-    deg.choose <- which(bic == min(bic)) + 1
+    deg.choose <- which(bic == min(bic)) 
   } else {
     deg.choose <- select.deg
   }
@@ -194,8 +193,8 @@ MRpredict <- function(data, sigma, Mass.min = NULL, Mass.max = NULL,
   
   if (bootstrap == TRUE) {
     
-    weights <- Mass.marg.boot <- Radius.marg.boot <- 
-      M.cond.R.boot.var <- M.cond.R.boot <- R.cond.M.boot <- list() 
+    # weights <- Mass.marg.boot <- Radius.marg.boot <- 
+    #   M.cond.R.boot.var <- M.cond.R.boot <- R.cond.M.boot <- list() 
     pb  <- txtProgressBar(1, num.boot, style=3)
     cat("\nStarting Bootstrap: \n")
     
