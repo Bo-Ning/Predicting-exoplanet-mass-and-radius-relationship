@@ -200,7 +200,7 @@ MRpredict <- function(data, sigma, Mass.min = NULL, Mass.max = NULL,
     
     boot.parallel.fn <- function(rep) {
       # setTxtProgressBar(pb, rep)
-      print(rep)
+      print(rep) 
       
       n.boot <- sample(1:n, replace = T)
       data.boot <- data[n.boot, ]
