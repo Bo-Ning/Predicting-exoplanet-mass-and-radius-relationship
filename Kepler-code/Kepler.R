@@ -37,7 +37,7 @@ bounds <- c(Mass.max, Mass.min, Radius.max, Radius.min)
 
 source("MainFunctions/MRpredict.R")
 
-result <- MRpredict(data, sigma, Mass.min = Mass.min, Mass.max = Mass.max,
+result <- MRestimate(data, sigma, Mass.min = Mass.min, Mass.max = Mass.max,
                     Radius.min = Radius.min, Radius.max = Radius.max, 
                     log = TRUE, select.deg = select.deg, 
                     bootstrap = FALSE, num.boot = 20, store.output = FALSE,

@@ -20,6 +20,12 @@ i) cross-validation.R: the function to choose optimal degree of Bernstein polyno
 
 ii) MLE.R: the function to estimate weights in the Bernstein polynomials function
 
-iii) MRpredict.R: the function to obtain conditional and marginal densities from the joint M,R distribution
+iii) MRestimate.R: the function to obtain conditional and marginal densities from the joint M,R distribution
 
 -- Result-Kepler: to produce figures presented in the paper, run the code: Kepler-plot.R 
+
+Folder3: MR-predict
+
+-- MRpredict.R: input a planet Radius (in original scale) (with or without measurement errors; posterior samples), return a predicted mass (in log10 scale) and it's quantiles.
+
+--weights.mle.csv: estimated weights in the nonparametric model based on the dataset we used in the paper
