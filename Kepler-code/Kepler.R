@@ -35,7 +35,7 @@ M.sg <- Mass.sigma
 R.sg <- Radius.sigma
 bounds <- c(Mass.max, Mass.min, Radius.max, Radius.min)
 
-source("MainFunctions/MRpredict.R")
+source("MainFunctions/MRestimate.R")
 
 result <- MRestimate(data, sigma, Mass.min = Mass.min, Mass.max = Mass.max,
                     Radius.min = Radius.min, Radius.max = Radius.max, 
