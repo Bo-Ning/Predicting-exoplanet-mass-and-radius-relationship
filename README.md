@@ -1,6 +1,6 @@
 # Predicting exoplanet mass and radius relationship
 
-#### NOTE: For python users, we have a python package avaiable now. Please check https://github.com/shbhuk/mrexo!
+#### <font color="red"> NOTE: For python users, we have a python package avaiable now. Please check https://github.com/shbhuk/mrexo! </font>
 
 Folder1 : BenchmarkingWRF16-result
 
