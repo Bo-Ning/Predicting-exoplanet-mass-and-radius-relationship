@@ -130,12 +130,10 @@ predict.mass.given.radius <-
     # calculate the mean
     for (i in 1:k) {
       results <- 
-        cond.density.estimation(
-          y = radius.sample[i], y.max = Radius.max, 
-          y.min = Radius.min, x.max = Mass.max, 
-          x.min = Mass.min, deg = 55, 
-          w.hat = weights.mle, qtl = quantile,
-          only.output.mean = TRUE
+        conditonal.density(y = radius.sample[i], y.max = Radius.max, 
+                           y.min = Radius.min, x.max = Mass.max, 
+                           x.min = Mass.min, deg = 55, 
+                           w.hat = weights.mle, qtl = qtl
         )
       mean.sample[i] <- (results[1])
       denominator.sample[i] <- results[2]
